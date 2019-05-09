@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Exemplo de JSF</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
+        <style>
+            .background-grey {
+                background-color: #b4b8ba;
+                border: 1px solid black;
+            }
+            
+            .background-grey-light {
+                background-color: #d1d1d1;
+                border: 1px solid black;
+            }
+            
+            .example-content {
+                padding: 15px;
+            }
+            
+        </style>
+    </h:head>
+    <h:body>
+        
+        
+        <!--Exemplos de Interface de Usuário-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center background-grey">
+                    <h2>
+                        Componente de Interface
+                    </h2>
+                </div>
+                <div class="col text-center background-grey-light">
+                    <h2>Resultado</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:inputText
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:inputText></h:inputText>
+                    </h:form>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:outputText
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:outputText value="hello world!"></h:outputText>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:commandButton
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:commandButton value="Submit"></h:commandButton>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:inputSecret
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:inputSecret></h:inputSecret>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:inputTextarea
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:inputTextarea></h:inputTextarea>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:commandLink
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:commandLink action="index" value="index"/>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:inputHidden
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:inputHidden> </h:inputHidden>
+                        <p style="color: red">Não apresenta nada na tela!</p>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:inputFile
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:inputFile />
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:graphicImage
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:graphicImage value="https://avatarfiles.alphacoders.com/893/89303.gif"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:outputFormat
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:outputFormat value="Olá, {0}! Você é o visitante de número {1} da nossa página.">
+                        <f:param value="#{dadosUsuario.nome}"/>
+                        <f:param value="#{dadosUsuario.visitante}"/>
+                    </h:outputFormat>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:dataTable
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:dataTable value="#{dadosTabela.orderList}" var="o">
+                        <h:column>
+                            <f:facet name="header">Compra n°</f:facet>
+                            #{o.orderNo}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Nome Produto</f:facet>
+                            #{o.productName}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Preço</f:facet>
+                            #{o.price}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Quantidade</f:facet>
+                            #{o.qty}
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:message
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content"> 
+                    <h:form>
+                        <h:inputText id="ola" size="20" required="true" label="Teste">
+                            <f:validateLength minimum="5" maximum="20"/>
+                        </h:inputText>
+                        <div class="row">
+                            <div class="col text-center">
+                                <h:message for="ola" style="color:red"/>
+                            </div>
+                        </div>
+                        <h:commandButton value="Submit" action="result"/>
+                    </h:form> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:messages
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content"> 
+                    <h:form>
+                        <div class="row">
+                            <div class="col text-center">        
+                                <h:inputText id="ola" size="20" required="true" label="Teste">
+                                    <f:validateLength minimum="5" maximum="20"/>
+                                </h:inputText>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h:inputText id="ola2" size="10" required="true" label="Teste2">
+                                    <f:validateLength minimum="2" maximum="10"/>
+                                </h:inputText>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col text-center">
+                                <h:messages style="color:red"/>
+                            </div>
+                        </div>
+                        <h:commandButton value="Submit" action="result"/>
+                    </h:form> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectOneRadio
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:selectOneRadio> 
+                        <f:selectItem itemValue="1" itemLabel="1" />
+                        <f:selectItem itemValue="2" itemLabel="2" />
+                        <f:selectItem itemValue="3" itemLabel="3" />
+                    </h:selectOneRadio>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:outputLabel
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:outputLabel value="Nome de usuário: " for="label1"/>
+                    <h:inputText id="label1"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:outputLink
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:outputLink value="https://www.google.com.br">GOOGLE</h:outputLink>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:panelGrid + h:panelGroup
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:panelGrid columns="2" border="2" cellpadding="10" cellspacing="5">
+                            <h:panelGroup>
+                                <h:outputLabel value="Nome: " for="label2"/>
+                                <h:inputText id="label2" />
+                            </h:panelGroup>
+                            <h:panelGroup>
+                                <h:outputLabel value="Nome2: " for="label3"/>
+                                <h:inputText id="label3" />
+                            </h:panelGroup>
+                        </h:panelGrid>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectedBooleanCheckbox
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectBooleanCheckbox/> Lembrar-me
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectedManyCheckbox
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectManyCheckbox>
+                            <f:selectItem itemValue="1" itemLabel="Numero - 1" />
+                            <f:selectItem itemValue="2" itemLabel="Numero - 2" />
+                            <f:selectItem itemValue="3" itemLabel="Numero - 3" />
+                        </h:selectManyCheckbox>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectManyListbox
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectManyListbox>
+                            <f:selectItem itemValue="Carro 1" itemLabel="Carro 1" />
+                            <f:selectItem itemValue="Carro 2" itemLabel="Carro 2" />
+                            <f:selectItem itemValue="Carro 3" itemLabel="Carro 3" />
+                        </h:selectManyListbox>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectManyMenu
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectManyMenu>
+                            <f:selectItem itemValue="Carro 1" itemLabel="Carro 1" />
+                            <f:selectItem itemValue="Carro 2" itemLabel="Carro 2" />
+                            <f:selectItem itemValue="Carro 3" itemLabel="Carro 3" />
+                        </h:selectManyMenu>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectOneListBox
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectOneListbox>
+                            <f:selectItem itemValue="Carro 1" itemLabel="Carro 1" />
+                            <f:selectItem itemValue="Carro 2" itemLabel="Carro 2" />
+                            <f:selectItem itemValue="Carro 3" itemLabel="Carro 3" />
+                        </h:selectOneListbox>
+                    </h:form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center background-grey example-content">
+                    <h5>
+                        h:selectOneMenu
+                    </h5>
+                </div>
+                <div class="col text-center background-grey-light example-content">
+                    <h:form>
+                        <h:selectOneMenu>
+                            <f:selectItem itemValue="Carro 1" itemLabel="Carro 1" />
+                            <f:selectItem itemValue="Carro 2" itemLabel="Carro 2" />
+                            <f:selectItem itemValue="Carro 3" itemLabel="Carro 3" />
+                        </h:selectOneMenu>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <h3>Exemplo de JSF EL</h3>
+        <p>Olá <h:outputText id="output" value="#{dadosUsuario.nome}"/></p>
+
+        <br>
+        </br>
+        
+        <h:outputText value="#{dadosUsuario.mensagem}"/>
+        
+        <h:form>
+            Entre com um nome: <h:inputText id="nome" value="#{dadosUsuario.nome}"/>
+>            <h:commandButton class="btn btn-primary" value="Submit"> 
+                <f:ajax execute="nome" render="output"/>
+            </h:commandButton>
+        </h:form>
+
+    </h:body>
+</html>
+
