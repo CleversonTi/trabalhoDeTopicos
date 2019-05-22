@@ -17,7 +17,7 @@ public class ContaController {
     private String nome;
     private String senha;
 
-    @Size(min = 3, max = 20)
+   
     private int idade;
 
     public int getIdade() {
