@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+		
+	<head>		
+		<title>CRUD - Show</title>
+	</head>
+	
+	<body>
+	
+		<strong>Show</strong><br />
+
+		<h:form>
+			<h:commandLink action="edit" value="Editar">
+				<f:param name="id" value="#{produtoMBean.produto.id}" />
+			</h:commandLink>
+
+			| <h:outputLink value="list.jsf">Voltar</h:outputLink>
+
+			<br /><br /> 
+			 
+			Nome: 
+			<h:outputText value="#{produtoMBean.produto.nome}" />
+
+			<br />
+			
+			Descrição: <h:outputText value="#{produtoMBean.produto.descricao}" />
+	
+			<br />
+			
+			Preço: <h:outputText value="#{produtoMBean.produto.preco}" />
+						
+
+		</h:form>
+
+	</body>
+		
+		
+</html>
+

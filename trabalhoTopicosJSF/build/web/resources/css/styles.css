@@ -1,0 +1,99 @@
+root
+{
+    display: block;
+
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #c1c1c1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.box {
+    width: 400px;
+    height: 250px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.operacoes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    height: 5%;
+    width:50%;
+}
+
+.operacoesa{
+    text-decoration: none;
+
+}
+.operacoes a{
+    text-decoration: none;
+    margin-left: 25%;
+}
+.operacoes a:hover{
+    background: #c1c1c1; 
+    color: #000;
+}
+.contentPrincipal{
+    width: 100%;
+
+}
+.contentPrincipal h2{margin-left: 20%;}
+.contentPrincipal h3{margin-left: 35%;}
+.contentPrincipal h4{margin-left: 25%;}
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    list-style:none;
+}
+#menu ul li { display: inline; }
+#menu ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+
+    /* visual do link */
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid #EDEDED;
+}
+.leftalign{
+    text-align: left;
+
+}
+.rightalign{
+    text-align: right;
+}
+.centered{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-tex{
+    text-align: center;
+}
+.rightalign-bold{
+    font-weight: bold;
+    text-align: right;
+}
+.saida{
+    color: #ff3300;
+    padding: 2px;
+    border:solid 1px #cccccc;
+}
+.btn{
+
+    background-color: green;
+    color: #fff;
+    font-weight: 300;
+    padding: 2px;
+}
