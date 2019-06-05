@@ -6,8 +6,8 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Aplicação JSF</title>
-        
-        <h:outputScript library="js" name="bootstrap.js"/>
+
+
         <h:outputStylesheet library="css" name="bootstrap.css"/>
         <!--<h:outputStylesheet library="css" name="styles.css"/>-->
         <style>
@@ -23,10 +23,22 @@
                 color: white !important;
             }
 
+            .dropdown-menu{
+                background:#343a40;
+            }
+
+            .dropdown-item:hover {
+                background-color: #343a40 !important;
+            }
+
+            .dropdown:hover>.dropdown-menu {
+                display: block;
+                background: #343a40;
+            }
         </style>
     </h:head>
     <h:body>
-        
+
         <div class="container-fluid">
             <div class="row" id="backDark">
                 <div class="col text-center">
@@ -45,18 +57,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/componentes-ui.xhtml">Componentes UI</a>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ManagedBeans
+                        <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">NoneScoped</a>
+                        <a class="dropdown-item" href="#">RequestScoped</a>
+                        <a class="dropdown-item" href="#">ViewScoped</a>
+                        <a class="dropdown-item" href="#">SessionScoped</a>
+                        <a class="dropdown-item" href="#">ApplicationScoped</a>
+                    </div>
+                </li>
                 <li class="nav-item">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">ManagedBean
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">NoneScoped</a></li>
-                            <li><a href="#">RequestScoped</a></li>
-                            <li><a href="#">ViewScoped</a></li>
-                            <li><a href="#">SessionScoped</a></li>
-                            <li><a href="#">ApplicationScoped</a></li>
-                        </ul>
-                    </li>
                     <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/listener.xhtml">Listener</a>
                 </li>
                 <li class="nav-item">
