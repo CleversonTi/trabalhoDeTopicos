@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+    <ui:composition template="../layout_operacoes.xhtml">
+        <ui:define name="content">
+            <h3>Exemplo de JSF Renderer e Expression Language</h3>
+            
+            <h:form>
+                <h:inputText value="#{render.userName}" required="true" rendered="#{!render.loggedIn()}"/>
+                <h:commandButton value="login" action="#{render.login()}" rendered="#{!render.loggedIn()}"/>
+                <h:commandButton value="logout" action="#{render.logout()}" rendered="#{render.loggedIn()}"/>
+            </h:form>
+            
+            <h:panelGroup rendered="#{sessionScope.render.loggedIn()}">
+                Usuário logado como #{sessionScope.render.getUserName()}
+            </h:panelGroup>
+            <h:panelGroup rendered="#{!sessionScope.render.loggedIn()}">
+                Você não está logado!
+            </h:panelGroup>
+            
+            <p>
+                
+            </p>
+
+        </ui:define>
+    </ui:composition>
+
+</html>
+

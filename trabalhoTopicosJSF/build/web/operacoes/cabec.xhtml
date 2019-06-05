@@ -6,24 +6,27 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Aplicação JSF</title>
+        
+        <h:outputScript library="js" name="bootstrap.js"/>
         <h:outputStylesheet library="css" name="bootstrap.css"/>
         <!--<h:outputStylesheet library="css" name="styles.css"/>-->
         <style>
             #backDark {
                 background:#343a40 !important;
             }
-            
+
             a {
                 color: rgba(255,255,255,.5) !important;
             }
-            
+
             a:hover {
                 color: white !important;
             }
-            
+
         </style>
     </h:head>
     <h:body>
+        
         <div class="container-fluid">
             <div class="row" id="backDark">
                 <div class="col text-center">
@@ -32,7 +35,7 @@
             </div>
         </div>
         <div class="container-fluid" id="backDark">
-            <ul class="nav justify-content-center"> 
+            <ul class="nav nav-bar justify-content-center"> 
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/index.xhtml">Início</a>
                 </li>
@@ -43,6 +46,17 @@
                     <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/componentes-ui.xhtml">Componentes UI</a>
                 </li>
                 <li class="nav-item">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">ManagedBean
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">NoneScoped</a></li>
+                            <li><a href="#">RequestScoped</a></li>
+                            <li><a href="#">ViewScoped</a></li>
+                            <li><a href="#">SessionScoped</a></li>
+                            <li><a href="#">ApplicationScoped</a></li>
+                        </ul>
+                    </li>
                     <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/listener.xhtml">Listener</a>
                 </li>
                 <li class="nav-item">
