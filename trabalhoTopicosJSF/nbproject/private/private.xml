@@ -3,16 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/src/java/br/edu/utfpr/NomesBens.java</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/index.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/validator/confirmacao.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/validator/validateFront.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/index.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/validator/validato.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/renders/confirmacao_1.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/resources/css/styles.css</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/cabec.xhtml</file>
-            <file>file:/C:/Users/clevi/OneDrive/Documentos/NetBeansProjects/trabalhoTopicosJSF/web/operacoes/layout_operacoes.xhtml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/WEB-INF/web.xml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/operacoes/index.xhtml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/resources/css/styles.css</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/index.xhtml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/src/java/br/edu/negocio/ProdutoServiceImplMock.java</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/resources/css/bootstrap.css</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/src/conf/MANIFEST.MF</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/nbproject/build-impl.xml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/web/operacoes/cabec.xhtml</file>
+            <file>file:/Users/nadook/Documents/Workspace/trabalhoDeTopicos/trabalhoTopicosJSF/src/java/br/edu/utfpr/RegistrarBean.java</file>
         </group>
     </open-files>
 </project-private>

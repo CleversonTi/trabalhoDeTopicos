@@ -1,4 +1,4 @@
-package br.com.crudjsf.mbean;
+package br.edu.mbean;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
-import br.com.crudjsf.entidade.Produto;
-import br.com.crudjsf.negocio.ProdutoService;
-import br.com.crudjsf.negocio.ProdutoServiceImplMock;
+import br.edu.entidade.Produto;
+import br.edu.negocio.ProdutoService;
+import br.edu.negocio.ProdutoServiceImplMock;
 
 @ManagedBean
 public class ProdutoMBean {
@@ -51,15 +51,16 @@ public class ProdutoMBean {
 	
 	public String editar() {
 		produtoService.merge(produto);
-		return "show";
+		return "list";
 	}
 	
 	public String adicionar() {
 		produtoService.add(produto);
-		return "show";
+		return "list";
 	}
 	
 	public void remover() {
 		produtoService.remove(produto);
+          
 	}
 }

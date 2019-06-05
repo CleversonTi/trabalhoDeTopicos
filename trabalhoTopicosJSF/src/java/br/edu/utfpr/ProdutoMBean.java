@@ -6,11 +6,15 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
-import br.com.crudjsf.entidade.Produto;
-import br.com.crudjsf.negocio.ProdutoService;
-import br.com.crudjsf.negocio.ProdutoServiceImplMock;
+import br.edu.entidade.Produto;
+import br.edu.negocio.ProdutoService;
+import br.edu.negocio.ProdutoServiceImplMock;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
 @ManagedBean
+@ApplicationScoped
 public class ProdutoMBean {
 	
 	private ProdutoService produtoService = new ProdutoServiceImplMock();

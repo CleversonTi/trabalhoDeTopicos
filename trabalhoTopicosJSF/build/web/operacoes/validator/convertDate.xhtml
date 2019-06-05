@@ -19,14 +19,14 @@
 			size="20" required="true"
 			label="Digite a data" >
 					
-			<f:convertDateTime pattern="d-M-yyyy" />
+                     <f:convertDateTime type="date" locale="#{receipt.locale}" />
 		  </h:inputText>
 					
 		  <h:message for="date" style="color:red" />
 			
 		</h:panelGrid>
 			
-		<h:commandButton value="Enviar" action="receipt" class="btn"/>
+		<h:commandButton class="btn btn-primary" value="Enviar" action="receipt" />
             </h:form>
             
               </ui:define>

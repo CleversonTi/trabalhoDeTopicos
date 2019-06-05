@@ -5,40 +5,68 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <title>Aplicaão JSF</title>
-        <h:outputStylesheet library="css" name="styles.css"/>
+        <title>Aplicação JSF</title>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <!--<h:outputStylesheet library="css" name="styles.css"/>-->
+        <style>
+            #backDark {
+                background:#343a40 !important;
+            }
+            
+            a {
+                color: rgba(255,255,255,.5) !important;
+            }
+            
+            a:hover {
+                color: white !important;
+            }
+            
+        </style>
     </h:head>
     <h:body>
-        <header>
-            <div class="nav">
-                <h1 align="center">Exemplos de Aplicações JSF</h1>
+        <div class="container-fluid">
+            <div class="row" id="backDark">
+                <div class="col text-center">
+                    <h1 style="color: white;">Exemplos de Aplicações JSF</h1>
+                </div>
             </div>
-        </header>
-       
-            <h:form>
-                <nav id="menu">
-                    <ul>
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/index.xhtml">Inicio</a></li>
-                        <li><a>Expression Language</a></li>
-                        <li><a href="#">Componentes de UI</a></li>                        
-                        
-
-                        <li><a href="#">Renderers</a></li>                       
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/list.xhtml">List</a></li>
-
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/navegacaoImplicita.xhtml">Navegação Implícita</a></li>  
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/NavegacaoDinamica.xhtml">Navegação Dinâmica</a></li>
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/validato.xhtml">Validators</a></li>                       
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/validateFront.xhtml">Validators</a></li>         
-                        <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/convertDate.xhtml">Convert DateTime</a></li>
-                    </ul>
-                </nav>
-                <f:facet name="options">
-                   
-                   
-                </f:facet>
-               
-            </h:form>
-        
+        </div>
+        <div class="container-fluid" id="backDark">
+            <ul class="nav justify-content-center"> 
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/index.xhtml">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/expression-language.xhtml">Expression Language</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/componentes-ui.xhtml">Componentes UI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/listener.xhtml">Listener</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/renders/confirmacao_1.xhtml">Renders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/list.xhtml">List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/navegacaoImplicita.xhtml">Navegação Implícita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/NavegacaoDinamica.xhtml">Navegação Dinâmica</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/validato.xhtml">Validator 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/validateFront.xhtml">Validators 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/convertDate.xhtml">ConvertDateTime</a>
+                </li>
+            </ul>
+        </div>
     </h:body>
 </html>

@@ -8,8 +8,9 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class ReceiptBean implements Serializable{
 
-	Date date;
-
+	Date date = new Date();
+        String locale ="pt_BR";
+        
 	public Date getDate() {
 		return date;
 	}
@@ -17,5 +18,9 @@ public class ReceiptBean implements Serializable{
 	public void setDate(Date date) {
 		this.date = date;
 	}
+        
+        public String getLocale() {
+            return this.locale;
+        }
 
 }

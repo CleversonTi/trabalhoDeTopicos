@@ -11,9 +11,9 @@
     <ui:composition template="../layout_operacoes.xhtml">
         <ui:define name="content">
             
-            <h:form id="formPessoa">
+            <h:form>
 
-                <h1>Olá JSF, Está é a primeira pagina de NAVEGAÇÔES</h1>
+                <h1 style="color:black !important;">Olá JSF, Está é a primeira pagina de NAVEGAÇÔES</h1>
 		<span><b>Nome:</b></span>
 		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
 		
@@ -22,7 +22,7 @@
                 <h:commandButton binding="#{pessoaBean.botao}" value="Add" action="#{pessoaBean.addNome()}" />
                 <h:dataTable value="#{pessoaBean.nomes}" var="nome">
                     <h:column>
-                        <h:outputText value="#{nome}"/>   
+                        <h:outputText style="color: black !important;" value="#{nome}"/>   
                     </h:column>
                 </h:dataTable>
             </h:form>

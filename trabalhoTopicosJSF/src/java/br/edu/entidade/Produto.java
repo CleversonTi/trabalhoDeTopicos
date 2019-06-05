@@ -1,9 +1,8 @@
-package br.com.crudjsf.entidade;
+package br.edu.entidade;
 
 public class Produto {
 
 	private Integer id;
-	
 	private String nome;
 	
 	private String descricao;

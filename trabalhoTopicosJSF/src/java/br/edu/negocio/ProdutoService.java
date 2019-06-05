@@ -1,8 +1,8 @@
-package br.com.crudjsf.negocio;
+package br.edu.negocio;
 
 import java.util.List;
 
-import br.com.crudjsf.entidade.Produto;
+import br.edu.entidade.Produto;
 
 public interface ProdutoService {
 

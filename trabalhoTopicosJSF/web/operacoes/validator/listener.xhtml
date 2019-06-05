@@ -6,16 +6,25 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+
     </h:head>
 
     <ui:composition template="../layout_operacoes.xhtml">
         <ui:define name="content">
-            <h1 style="color:black !important;">Navegação Implicita</h1>
-            <h:form>
+            <h1>Exemplo de Listener</h1>
 
-               <h:commandButton value="Navegar" action="primeirapagina"/>
+            <h:body>
+                <h:form>
 
-            </h:form>
+                    <h:commandButton class="btn btn-primary" value="Clique"  action="#{listeners.action}" actionListener="#{listeners.envieParaIndex}"> 
+                        <f:attribute name="usuario" value="UsuárioTeste"/>
+
+                    </h:commandButton>
+
+
+                </h:form>
+
+            </h:body>
 
         </ui:define>
     </ui:composition>
