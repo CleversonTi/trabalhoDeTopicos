@@ -14,14 +14,11 @@
             <h:form>
                 <h1>Exemplo de  convertDate JSF 2</h1>
 
-                Conversor de Data 1:  
+                Conversor de Data :  
                 <h:outputText value="#{receipt.date}" >
-                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                    <f:convertDateTime pattern="d-M-yyyy" />
                 </h:outputText>
-                <br></br>
-                <h:outputText value="#{receipt.date}">
-                    <f:convertDateTime pattern="dd/MM/yyyy hh:mm"/>
-                </h:outputText>
+
             </h:form>
 
         </ui:define>

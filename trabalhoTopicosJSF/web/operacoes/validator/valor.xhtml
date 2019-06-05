@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:composition template="../layout_operacoes.xhtml">
+        <ui:define name="content">
+            <h:body> 
+                <h1>Exemplos ConvertNumber</h1>
+                <ol>
+                    <li>
+                        Valor [minFractionDigits="2"] : 
+                        <h:outputText value="#{convertNumberBean.valor}" >
+                            <f:convertNumber minFractionDigits="2" />
+                        </h:outputText>
+                    </li>
+                    <li>
+                        Valor [pattern="#0.000"] : 
+                        <h:outputText value="#{convertNumberBean.valor}" >
+                            <f:convertNumber pattern="#0.000" />
+                        </h:outputText>
+                    </li>
+                    <li>
+                        Valor [currencySymbol="$"] : 
+                        <h:outputText value="#{convertNumberBean.valor}">
+                            <f:convertNumber currencySymbol="$" type="currency" />
+                        </h:outputText>
+                    </li>
+                    
+                    <li>
+                        Valor [type="percent"] : 
+                        <h:outputText value="#{convertNumberBean.valor}" >
+                            <f:convertNumber type="percent" />
+                        </h:outputText>
+                    </li>
+                </ol> 
+            </h:body>
+        </ui:define>
+    </ui:composition>
+</html>

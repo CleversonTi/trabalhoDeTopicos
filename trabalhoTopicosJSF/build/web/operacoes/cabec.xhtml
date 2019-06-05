@@ -6,81 +6,68 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <title>Aplicação JSF</title>
-        
-        <h:outputScript library="js" name="bootstrap.js"/>
-        <h:outputStylesheet library="css" name="bootstrap.css"/>
-        <!--<h:outputStylesheet library="css" name="styles.css"/>-->
-        <style>
-            #backDark {
-                background:#343a40 !important;
-            }
-
-            a {
-                color: rgba(255,255,255,.5) !important;
-            }
-
-            a:hover {
-                color: white !important;
-            }
-
-        </style>
+        <h:outputStylesheet library="css" name="styles.css"/>
     </h:head>
     <h:body>
-        
-        <div class="container-fluid">
-            <div class="row" id="backDark">
-                <div class="col text-center">
-                    <h1 style="color: white;">Exemplos de Aplicações JSF</h1>
-                </div>
+        <header>
+            <div class="nav">
+                <h1 align="center">Exemplos de Aplicações JSF</h1>
             </div>
-        </div>
-        <div class="container-fluid" id="backDark">
-            <ul class="nav nav-bar justify-content-center"> 
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/index.xhtml">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/expression-language.xhtml">Expression Language</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/componentes-ui.xhtml">Componentes UI</a>
-                </li>
-                <li class="nav-item">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">ManagedBean
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">NoneScoped</a></li>
-                            <li><a href="#">RequestScoped</a></li>
-                            <li><a href="#">ViewScoped</a></li>
-                            <li><a href="#">SessionScoped</a></li>
-                            <li><a href="#">ApplicationScoped</a></li>
+        </header>
+
+        <h:form>
+            <nav id="menu">
+                <ul>
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/">Inicio</a></li>
+                    <li><a>Expression Language</a></li>
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/ui.xhtml">Componentes de UI</a></li>                        
+
+
+                                       
+                    <li><a href="#">Managed Beans</a>
+                        <ul>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/noneScoped.xhtml">NoneScoped</a></li>                            
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/requestScoped.xhtml">Request Scoped</a></li>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/viewScoped.xhtml">View Scoped</a></li>                            
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/sessionScoped.xhtml">Session Scoped</a></li>                            
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/applicationScope.xhtml">Application Scope</a></li>
+
+
+
+
+                        </ul>
+                    </li>      
+
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/navegacaoImplicita.xhtml">Navegação Implícita</a></li>  
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/NavegacaoDinamica.xhtml">Navegação Dinâmica</a></li>
+                    <li><a href="#">Validators</a>
+                        <ul>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/validato.xhtml">E-mail</a></li>                            
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/valor.xhtml">ConvertNumber</a></li>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/cpf.xhtml">Validar CPF</a></li>
+
+
+                        </ul>
+                    </li>                       
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/validateFront.xhtml">Validators</a></li>         
+                    <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/convertDate.xhtml">Convert DateTime</a></li>
+                    <li><a href="#">Crud</a>
+                        <ul>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/list.xhtml">Listar</a></li>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/new.xhtml">Criar</a></li>
+                            <li><a href="http://localhost:8080/trabalhoTopicosJSF/faces/operacoes/validator/edit.xhtml">Alterar</a></li>                       
+
+
                         </ul>
                     </li>
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/listener.xhtml">Listener</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/renders/confirmacao_1.xhtml">Renders</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/list.xhtml">List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/navegacaoImplicita.xhtml">Navegação Implícita</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/NavegacaoDinamica.xhtml">Navegação Dinâmica</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/validato.xhtml">Validator 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/validateFront.xhtml">Validators 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/trabalhoTopicosJSF/operacoes/validator/convertDate.xhtml">ConvertDateTime</a>
-                </li>
-            </ul>
-        </div>
+                </ul>
+            </nav>
+            <f:facet name="options">
+
+
+            </f:facet>
+
+        </h:form>
+
     </h:body>
 </html>

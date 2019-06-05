@@ -12,24 +12,8 @@
 
     <ui:composition template="../layout_operacoes.xhtml">
         <ui:define name="content">
-            <h3>Exemplo de JSF Renderer e Expression Language</h3>
+            <h3>Exemplo de JSF Renderer Componente Pesrsonalizado  </h3>
             
-            <h:form>
-                <h:inputText value="#{render.userName}" required="true" rendered="#{!render.loggedIn()}"/>
-                <h:commandButton value="login" action="#{render.login()}" rendered="#{!render.loggedIn()}"/>
-                <h:commandButton value="logout" action="#{render.logout()}" rendered="#{render.loggedIn()}"/>
-            </h:form>
-            
-            <h:panelGroup rendered="#{sessionScope.render.loggedIn()}">
-                Usuário logado como #{sessionScope.render.getUserName()}
-            </h:panelGroup>
-            <h:panelGroup rendered="#{!sessionScope.render.loggedIn()}">
-                Você não está logado!
-            </h:panelGroup>
-            
-            <p>
-                
-            </p>
 
         </ui:define>
     </ui:composition>

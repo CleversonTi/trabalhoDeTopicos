@@ -12,13 +12,14 @@
         <ui:define name="content">
             <h1>Novo </h1>
             <body>
+                
           <h:messages />
           <h:form>
-              <h:commandLink class="btn btn-primary" style="color:white !important" action="#{produtoMBean.adicionar()}" value="Salvar">
+              <h:commandLink action="#{produtoMBean.adicionar}" value="Salvar">
                    <f:param name="id" value="#{produtoMBean.produto.id}" />
               </h:commandLink>
               | 
-              <h:outputLink class="btn btn-primary" style="color:white !important" value="list.xhtml">Voltar</h:outputLink>
+              <h:outputLink value="list.xhtml">Voltar</h:outputLink>
               <br /><br />
  
               Nome: <h:inputText value="#{produtoMBean.produto.nome}" />

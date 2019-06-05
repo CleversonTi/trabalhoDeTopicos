@@ -1,45 +1,45 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//PT" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
-        
     </h:head>
 
     <ui:composition template="../layout_operacoes.xhtml">
         <ui:define name="content">
-            <h1>Exemplo de List </h1>
+            <h1> <strong>Listar</strong><br /> </h1>
             <body>
+
                 <h:form>
-                    <h:outputLink class="btn btn-primary" style="color: white !important;" value="new.xhtml">Novo</h:outputLink>
+                    <h:outputLink value="new.xhtml">Novo</h:outputLink>
                     <br/><br />
                     <h:dataTable value="#{produtoMBean.lista}" var="produto">
                         <h:column>
                             <f:facet name="header">Nome</f:facet>
-                            #{produto.nome}
+                                #{produto.nome}
                         </h:column>
                         <h:column>
                             <f:facet name="header">Descrição</f:facet>
-                            #{produto.descricao}
+                                #{produto.descricao}
                         </h:column>
                         <h:column>
                             <f:facet name="header">Preço</f:facet>
-                            #{produto.preco}
+                            <h:outputLabel value="#{produto.cifrao}"/> #{produto.preco}
                         </h:column>
                         <h:column>
-                            <h:commandButton class="btn btn-primary" style="color: white !important; margin-left: 15px" action="show" value="Ver">
+                            <h:commandButton action="show" value="Ver">
                                 <f:param name="id" value="#{produto.id}" />
                             </h:commandButton>
-                            <h:commandButton class="btn btn-primary" style="color: white !important; margin-left: 15px" action="edit" value="Editar">
+                            <h:commandButton action="edit" value="Editar">
                                 <f:param name="id" value="#{produto.id}" />
                             </h:commandButton>
-                            <h:commandButton class="btn btn-primary" style="color: white !important; margin-left: 15px" action="#{produtoMBean.remover()}" 
+                            <h:commandButton action="#{produtoMBean.remover}" 
                                              value="Excluir" 
-                                             onclick="return confirm('Tem certeza?')">
-                                             <f:param name="id" value="#{produto.id}" />
+                                             onclick="return confirm(‘Tem certeza?’)">
+                                <f:param name="id" value="#{produto.id}" />
                             </h:commandButton>
                         </h:column>
                     </h:dataTable>
