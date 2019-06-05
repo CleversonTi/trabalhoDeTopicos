@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+    <ui:composition template="../layout_operacoes.xhtml">
+        <ui:define name="content">
+            <h:body>
+                <h:form>
+
+                    <h3>Cadastro de novo cliente</h3>
+                    <div>
+                        Nome: <h:inputText id="nome" label="Nome" requiredMessage="Informe o nome do usuario" validatorMessage="Nome tem que ter entre 3 e 100 letras" value="#{cliente.nome}"/>
+                    </div>
+                    <div> Data de nascimento: 
+                        <h:inputText id="date" label="data Nascimento" requiredMessage="Informe o nome do usuario" validatorMessage="Informe a data de Nascimento" value="#{cliente.dataDeNascimento}">
+                            <f:convertDateTime pattern="dd/MM/yyyy" type="date"/>
+                        </h:inputText>
+                    </div>
+                    <div>
+                        CPF: <h:inputText value="#{cliente.cpf}" converter="cpfConverter"/>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <h:commandButton action="resultadoCPF" value="Cadastrar" />
+                    </div>
+
+                </h:form>
+            </h:body>
+
+
+        </ui:define>
+    </ui:composition>
+
+</html>
+

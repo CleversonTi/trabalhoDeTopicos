@@ -17,7 +17,10 @@ public class NomesBens {
     
     
     public String getNome() {
-        return nome;
+        
+            return nome;
+        
+        
     }
 
     public void setNome(String nome) {
@@ -42,5 +45,13 @@ public class NomesBens {
 
     public void dizerOla(){
         mensagem = "Olá "+ nome + " " + sobreNome;
+    }
+    
+    public String contador(){
+         if(nome.length() <3 && nome.length() >10){
+            return "Nome tem que ter entre 3 e 10 letrasss";
+        }else{
+            return nome;
+        }
     }
 }

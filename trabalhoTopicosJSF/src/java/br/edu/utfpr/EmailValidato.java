@@ -31,7 +31,7 @@ public class EmailValidato implements Validator{
             label = htmlInputText.getLabel();
         }
         
-        if(match.matches()){
+        if(!match.matches()){
             FacesMessage facesMessage = new FacesMessage(label + ": Email não valido");
             throw new ValidatorException(facesMessage);
         }

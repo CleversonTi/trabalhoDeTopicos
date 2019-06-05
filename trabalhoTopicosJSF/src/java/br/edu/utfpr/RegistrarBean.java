@@ -1,8 +1,8 @@
 package br.edu.utfpr;
 
+import com.sun.istack.internal.NotNull;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.validation.constraints.NotNull;
 @ManagedBean
 @RequestScoped
 public class RegistrarBean {
